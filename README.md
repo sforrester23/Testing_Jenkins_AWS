@@ -1,6 +1,8 @@
 # Pipelines
 By standardising our environments, we can speed up the process of project delivery and deployment using the following techniques to automate our pipeline procedure:
 
+![CICD_pipeline](https://www.edureka.co/blog/content/ver.1531719070/uploads/2018/07/Asset-33-1.png)
+
 ## Continuous Integration: CI
 
 CI is the process of automating your environments in a pipeline to a point where a push on git or similar action can initiate a build (using Jenkins automation server) to test codes in the same environment as the where code was developed, informing us of how the code performed in the tests.
@@ -17,10 +19,7 @@ CD#2 pipelining is achieved when both CI and CD#1 are completed, that being the 
 
 # Amazon Web Services (AWS) Functionality
 
-![CICD_pipeline](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwihsfSE9LDlAhXi6eAKHaDSAH4QjRx6BAgBEAQ&url=https%3A%2F%2Fdzone.com%2Farticles%2Flearn-how-to-setup-a-cicd-pipeline-from-scratch&psig=AOvVaw0E4TaxziQ0S-mC8xz0apyz&ust=1571869384745175)
-
-
-
+![AWS_network](https://docs.aws.amazon.com/vpc/latest/userguide/images/security-diagram.png)
 
 ## Region
 This is simply the region you specify when working with AWS, it specifies where the servers your using to host cloud services exist. We typically only operate in one region, as it can be hard to communicate between regions without using wider internet bandwidth.
@@ -54,3 +53,7 @@ A Machine Instance is what you set up to be able to develop, test and generally 
 
 ## Security Groups
 Security Groups are the next layer of security after NACLs. They are given to _each machine instance_ made in the VPC/subnet, providing more specific security to the instances that might be provided by an NACL, depending on whether you're considering inbound or outbound traffic. Again, they are usually a list of allowed ports from varying IP addresses, such as allowing GitHub access to your machine through certain ports to utilise a webhook. Together with NACLs, you can design a secure network with the correct capabilities to connect with the wider web (leaving yourself open to an external threat, maybe) or only allow internal access, for the likes of a secure database with customers' personal data.
+
+For example, rules might be:
+
+![security_rules_example](https://media.amazonwebservices.com/blog/2017/sg_rules_desc_3.png)

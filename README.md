@@ -17,6 +17,11 @@ CD#2 pipelining is achieved when both CI and CD#1 are completed, that being the 
 
 # Amazon Web Services (AWS) Functionality
 
+![CICD_pipeline](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwihsfSE9LDlAhXi6eAKHaDSAH4QjRx6BAgBEAQ&url=https%3A%2F%2Fdzone.com%2Farticles%2Flearn-how-to-setup-a-cicd-pipeline-from-scratch&psig=AOvVaw0E4TaxziQ0S-mC8xz0apyz&ust=1571869384745175)
+
+
+
+
 ## Region
 This is simply the region you specify when working with AWS, it specifies where the servers your using to host cloud services exist. We typically only operate in one region, as it can be hard to communicate between regions without using wider internet bandwidth.
 
@@ -39,7 +44,7 @@ Route tables tell the traffic in a VPC where to go. They tell traffic to pass fr
 ## Internet Gateway
 This is a function that, when attached to our VPC, allows it to communicate with the wider internet. This is done through route tables directing subnets to the gateway.
 
-We can also specify network access rules here, but since that will likely be done to a stronger degree in the other security settings, it might be practical to allow all traffic into this cloud and restrict unwanted access in other places. 
+We can also specify network access rules here, but since that will likely be done to a stronger degree in the other security settings, it might be practical to allow all traffic into this cloud and restrict unwanted access in other places.
 
 ## Network Access Control Lists (NACL)
 These are a set of security restraints associated with a given _subnet_ (or the entire _VPC_ itself, although this is not common). They are rules provided that define which IP addresses can access the subnet through which ports. For instance, port 80 might be open to all IPs to allow HTTP traffic through. You might open port 22 on your IP so only you can access the SSH of your machine. This is the first line of security in stopping unwanted things coming into your machine and causing problems. We usually set up NACLs around our subnets to define what can go in or out from the internet, but we can also set them up to only allow traffic from other subnets, making that subnet well protected from the world.
